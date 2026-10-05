@@ -1,0 +1,36 @@
+import pandas as pd
+
+# Read CSV file
+df = pd.read_csv("sales.csv")
+
+# Calculate sales
+df["Total_Sales"] = df["Quantity"] * df["Price"]
+
+print("===== SALES DATA =====")
+print(df)
+
+# Statistical summary
+print("\n===== STATISTICAL SUMMARY =====")
+print(df["Total_Sales"].describe())
+
+# Total sales
+print("\nTotal Sales:",
+      df["Total_Sales"].sum())
+
+# Average sales
+print("Average Sales:",
+      df["Total_Sales"].mean())
+
+# Highest sales
+highest = df.loc[df["Total_Sales"].idxmax()]
+
+print("\n===== HIGHEST SALE =====")
+print("Product:", highest["Product"])
+print("Sales:", highest["Total_Sales"])
+
+# Lowest sales
+lowest = df.loc[df["Total_Sales"].idxmin()]
+
+print("\n===== LOWEST SALE =====")
+print("Product:", lowest["Product"])
+print("Sales:", lowest["Total_Sales"])

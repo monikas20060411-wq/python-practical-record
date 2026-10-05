@@ -1,0 +1,11 @@
+Product,Category,Region,Quantity,Price,Revenue
+Laptop,Electronics,Chennai,5,60000,300000
+Laptop,Electronics,Mumbai,4,60000,240000
+Phone,Electronics,Chennai,10,30000,300000
+Phone,Electronics,Delhi,8,30000,240000
+Tablet,Electronics,Mumbai,6,20000,120000
+Tablet,Electronics,Delhi,7,20000,140000
+Headphones,Accessories,Chennai,15,3000,45000
+Headphones,Accessories,Mumbai,12,3000,36000
+Keyboard,Accessories,Delhi,20,1500,30000
+Keyboard,Accessories,Chennai,18,1500,27000

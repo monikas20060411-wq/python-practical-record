@@ -1,0 +1,40 @@
+posts = []
+
+def create_post():
+    post = {
+        "title": input("Enter title: "),
+        "content": input("Enter content: "),
+        "comments": []
+    }
+
+    posts.append(post)
+    print("Post created.")
+
+
+def add_comment():
+    title = input("Enter post title: ")
+
+    for post in posts:
+        if post["title"] == title:
+            comment = input("Enter comment: ")
+            post["comments"].append(comment)
+
+            print("Comment added.")
+            return
+
+    print("Post not found.")
+
+
+def view_posts():
+    for post in posts:
+        print("\nTitle:", post["title"])
+        print("Content:", post["content"])
+
+        print("Comments:")
+        for comment in post["comments"]:
+            print("-", comment)
+
+
+create_post()
+add_comment()
+view_posts()
